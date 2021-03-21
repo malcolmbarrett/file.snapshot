@@ -40,7 +40,6 @@ test_that("different directory works", {
   # but setting back to the project directory works
   setwd(root_dir)
   usethis::proj_set(old_proj)
-  # absolute path now works
   expect_snapshot_file(usethis::proj_path("hello_again.R"), "hello_again2.R")
   expect_snapshot_file(save_png(hist(mtcars$mpg)), "plot2.png")
 })
